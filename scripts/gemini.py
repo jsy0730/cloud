@@ -6,6 +6,8 @@ API 키는 환경의 네트워크 시크릿이 프록시에서 x-goog-api-key �
 
 사용 예:
   python3 scripts/gemini.py text "질문"
+  python3 scripts/gemini.py text "이 코드베이스 구조 요약" -d src -b
+  python3 scripts/gemini.py text "README 초안 작성" -f main.py -o README.md
   python3 scripts/gemini.py text "이 도면 설명해줘" -f plan.png -f spec.pdf
   python3 scripts/gemini.py text "최신 건축법 개정 내용" --search
   python3 scripts/gemini.py image "콘크리트 주택 외관 렌더" -o out/render.png
@@ -29,7 +31,9 @@ from pathlib import Path
 BASE = "https://generativelanguage.googleapis.com/v1beta"
 
 # 앞에서부터 시도하고, 과부하(429/500/503)나 404면 다음 모델로 넘어간다.
+# 기본(best)은 가장 좋은 모델부터 시도한다. 한도가 0인 모델은 SKIP_FILE에 기록해 한동안 건너뛴다.
 MODELS = {
+    "best": ["gemini-3.1-pro-preview", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.5-flash"],
     "text": ["gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.5-flash"],
     "pro": ["gemini-3.1-pro-preview", "gemini-pro-latest", "gemini-3.8-flash"],
     "lite": ["gemini-3.1-flash-lite", "gemini-flash-lite-latest", "gemini-3.8-flash"],
@@ -39,6 +43,36 @@ MODELS = {
 
 RETRYABLE = {429, 500, 503}
 INLINE_LIMIT = 20 * 1024 * 1024
+SKIP_FILE = Path.home() / ".cache" / "gemini_cli_skip.json"
+SKIP_SECONDS = 6 * 3600
+TEXT_EXTS = {
+    ".py", ".js", ".ts", ".tsx", ".jsx", ".json", ".md", ".txt", ".csv", ".tsv", ".html", ".css",
+    ".yaml", ".yml", ".toml", ".ini", ".cfg", ".sh", ".sql", ".xml", ".log", ".java", ".c", ".cpp",
+    ".h", ".go", ".rs", ".rb", ".php", ".kt", ".swift", ".tex", ".svg",
+}
+BRIEF = (
+    "답변은 다른 AI 에이전트가 읽는다. 군더더기·인사·반복 없이 핵심만, 가능한 한 짧게 쓴다. "
+    "목록과 구체적 수치·경로·이름을 우선하고, 확실하지 않은 내용은 '불확실'이라고 표시한다."
+)
+
+
+def _load_skip():
+    try:
+        data = json.loads(SKIP_FILE.read_text())
+    except (OSError, ValueError):
+        return {}
+    now = time.time()
+    return {m: t for m, t in data.items() if t > now}
+
+
+def _mark_skip(model):
+    data = _load_skip()
+    data[model] = time.time() + SKIP_SECONDS
+    try:
+        SKIP_FILE.parent.mkdir(parents=True, exist_ok=True)
+        SKIP_FILE.write_text(json.dumps(data))
+    except OSError:
+        pass
 
 
 def _request(method, url, body=None, headers=None, timeout=300):
@@ -96,6 +130,9 @@ def _file_part(p: str) -> dict:
     path = Path(p)
     if not path.is_file():
         sys.exit(f"파일 없음: {p}")
+    if path.suffix.lower() in TEXT_EXTS:
+        text = path.read_text(encoding="utf-8", errors="replace")
+        return {"text": f"=== 파일: {path} ===\n{text}"}
     mime = mimetypes.guess_type(path.name)[0] or "application/octet-stream"
     if path.stat().st_size > INLINE_LIMIT:
         return _upload(path, mime)
@@ -105,7 +142,9 @@ def _file_part(p: str) -> dict:
 def generate(models, body):
     """모델 후보를 차례로 시도하며 generateContent를 호출한다."""
     last = None
-    for model in models:
+    skip = _load_skip()
+    candidates = [m for m in models if m not in skip] or models
+    for model in candidates:
         for attempt in range(3):
             try:
                 _, _, raw = _request("POST", f"{BASE}/models/{model}:generateContent", body)
@@ -117,6 +156,8 @@ def generate(models, body):
                 if e.code == 429 and "free_tier" in detail:
                     # 무료 등급 한도 초과(또는 한도 0)는 재시도해도 소용없다.
                     last = f"{model}: 무료 등급 할당량 초과 (이미지·검색 등은 무료 한도가 0일 수 있음, 결제 등록 필요)"
+                    if "limit: 0" in detail:
+                        _mark_skip(model)
                     break
                 if e.code in RETRYABLE and attempt < 2:
                     time.sleep(2 * (attempt + 1))
@@ -132,6 +173,24 @@ def _parts(resp):
     if not cands:
         sys.exit("응답에 결과가 없음: " + json.dumps(resp.get("promptFeedback", resp), ensure_ascii=False)[:500])
     return cands[0].get("content", {}).get("parts", [])
+
+
+def _dir_files(dirs, max_bytes=3_000_000):
+    """폴더 안의 텍스트 파일을 모은다 (.git, node_modules 등 제외)."""
+    skip_dirs = {".git", "node_modules", "__pycache__", ".venv", "venv", "dist", "build", "out"}
+    files, total = [], 0
+    for d in dirs or []:
+        for f in sorted(Path(d).rglob("*")):
+            if any(part in skip_dirs for part in f.parts) or not f.is_file():
+                continue
+            if f.suffix.lower() not in TEXT_EXTS:
+                continue
+            total += f.stat().st_size
+            if total > max_bytes:
+                print(f"[gemini] 폴더 용량 {max_bytes}바이트 초과, 이후 파일 생략", file=sys.stderr)
+                return files
+            files.append(str(f))
+    return files
 
 
 def _build_body(prompt, files, system=None):
@@ -150,7 +209,8 @@ def _read_prompt(prompt):
 
 
 def cmd_text(a):
-    body = _build_body(_read_prompt(a.prompt), a.file, a.system)
+    system = "\n".join(x for x in [BRIEF if a.brief else None, a.system] if x) or None
+    body = _build_body(_read_prompt(a.prompt), (a.file or []) + _dir_files(a.dir), system)
     if a.search:
         body["tools"] = [{"google_search": {}}]
     if a.json:
@@ -161,7 +221,8 @@ def cmd_text(a):
     if a.output:
         Path(a.output).parent.mkdir(parents=True, exist_ok=True)
         Path(a.output).write_text(text, encoding="utf-8")
-        print(f"저장: {a.output}")
+        # 본문은 출력하지 않는다 (호출한 쪽이 필요한 부분만 읽도록).
+        print(f"저장: {a.output} ({len(text)}자, {text.count(chr(10)) + 1}줄)")
     else:
         print(text)
     if a.search:
@@ -235,7 +296,9 @@ def main():
     t = sub.add_parser("text", help="텍스트 생성 / 파일(이미지·PDF·오디오·영상) 분석")
     t.add_argument("prompt", help="프롬프트 ('-'면 stdin)")
     t.add_argument("-f", "--file", action="append", help="첨부 파일 (여러 번 가능)")
-    t.add_argument("--tier", choices=["text", "pro", "lite"], default="text")
+    t.add_argument("-d", "--dir", action="append", help="폴더 안 텍스트 파일 전부 첨부")
+    t.add_argument("-b", "--brief", action="store_true", help="에이전트용 초간결 답변")
+    t.add_argument("--tier", choices=["best", "text", "pro", "lite"], default="best")
     t.add_argument("-m", "--model")
     t.add_argument("-s", "--system", help="시스템 지시문")
     t.add_argument("--search", action="store_true", help="구글 검색 그라운딩")
