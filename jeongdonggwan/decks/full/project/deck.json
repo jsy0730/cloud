@@ -1,0 +1,83 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-11T15:00:00Z"
+ },
+ "lists": "css",
+ "title": "전포 정동관 · 전체본 (공설기 v1.2)",
+ "cover": "cover",
+ "order": [
+  "cover",
+  "contents",
+  "problem",
+  "overview",
+  "progress-main",
+  "site",
+  "selection",
+  "access",
+  "environment",
+  "concept",
+  "cases-1",
+  "cases-2",
+  "volume",
+  "decision",
+  "render-1",
+  "render-2",
+  "render-3",
+  "progress-concl",
+  "program",
+  "floors",
+  "sections",
+  "sections-b",
+  "area-above",
+  "area-below",
+  "circulation",
+  "legal-1",
+  "legal-2",
+  "proposal",
+  "open",
+  "thanks"
+ ],
+ "sections": {
+  "s1": {
+   "description": "INTRODUCTION: 표지, 목차, 사업 배경과 개요",
+   "start": "cover"
+  },
+  "s2": {
+   "description": "MAIN SUBJECT: 대지, 부지 선정, 환경, 콘셉트, 사례, 볼륨, 최종안, 투시도",
+   "start": "progress-main"
+  },
+  "s3": {
+   "description": "CONCLUSION: 용도, 층별, 단면, 면적, 동선, 법규, 제안",
+   "start": "progress-concl"
+  }
+ },
+ "faces": {
+  "pretendard": {
+   "family": "Pretendard",
+   "src": "project/ds/gongseolgi/fonts/Pretendard-Regular.woff2"
+  },
+  "pretendard-bold": {
+   "family": "Pretendard Bold",
+   "src": "project/ds/gongseolgi/fonts/Pretendard-Bold.woff2"
+  },
+  "pretendard-extrabold": {
+   "family": "Pretendard ExtraBold",
+   "src": "project/ds/gongseolgi/fonts/Pretendard-ExtraBold.woff2"
+  },
+  "noto-serif-kr": {
+   "family": "Noto Serif KR",
+   "href": "https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@900&display=swap"
+  }
+ },
+ "designSystems": [
+  {
+   "title": "공설기 v1.2",
+   "namespace": "gongseolgi",
+   "artifact": "https://claude.ai/artifact/L945L4Rv5pmxj397Xkt7cY",
+   "version": "1791713228-b453",
+   "copiedAt": "2026-10-11T15:00:00Z"
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+[out:json][timeout:90];
+(
+ nwr(around:1600,35.1570,129.0660)["name"~"체육|스포츠|극장|아트홀|씨어터|공연|문화|소극장|청소년|복지관|시어터"];
+ nwr(around:1600,35.1570,129.0660)["leisure"~"sports_centre|sports_hall|stadium|swimming_pool"];
+ nwr(around:1600,35.1570,129.0660)["amenity"~"theatre|arts_centre|community_centre|concert_hall|events_venue"];
+);
+out center tags;

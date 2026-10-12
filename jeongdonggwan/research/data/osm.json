@@ -1,0 +1,170 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.4 2390de5a",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-11T10:43:16Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 368634170,
+  "lat": 35.1495533,
+  "lon": 129.0643511,
+  "tags": {
+    "amenity": "cinema",
+    "brand": "씨제이 씨지브이)㈜",
+    "brand:en": "CGV Cinema",
+    "brand:ko": "씨제이 씨지브이)㈜",
+    "brand:kr": "씨제이 씨지브이)㈜",
+    "brand:wikidata": "Q5012261",
+    "name": "CGV 서면",
+    "name:en": "CGV Seomyeon",
+    "name:ko": "CGV 서면",
+    "name:ko-Latn": "CGV Seomyeon",
+    "name:kr": "씨제이 씨지브이)㈜"
+  }
+},
+{
+  "type": "node",
+  "id": 368634246,
+  "lat": 35.1543010,
+  "lon": 129.0601368,
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "부산진구",
+    "addr:floor": "4",
+    "addr:housenumber": "16",
+    "addr:postcode": "47296",
+    "addr:street": "중앙대로692번길",
+    "addr:subdistrict": "부전동",
+    "amenity": "cinema",
+    "level": "3",
+    "name": "CGV 대한점",
+    "name:en": "CGV Daehan"
+  }
+},
+{
+  "type": "node",
+  "id": 368634290,
+  "lat": 35.1542949,
+  "lon": 129.0572043,
+  "tags": {
+    "amenity": "cinema",
+    "name": "메가박스 서면점",
+    "name:en": "Megabox Seomyeonjeom",
+    "name:ja": "メガボックス 西面店",
+    "name:ko": "메가박스 서면점",
+    "name:ko-Latn": "Megabakseu Seomyeonjeom"
+  }
+},
+{
+  "type": "node",
+  "id": 368634583,
+  "lat": 35.1568650,
+  "lon": 129.0565620,
+  "tags": {
+    "amenity": "cinema",
+    "name": "롯데극장 부산본점",
+    "name:en": "Lotte Cinema",
+    "name:ja": "ロッテシネマ(釜山本店)",
+    "name:ko": "롯데극장 부산본점",
+    "name:ko-Latn": "Rotdegeukjang"
+  }
+},
+{
+  "type": "node",
+  "id": 368634801,
+  "lat": 35.1606351,
+  "lon": 129.0609721,
+  "tags": {
+    "amenity": "cinema",
+    "name": "서면현대극장",
+    "name:en": "Seomyeonhyeondae Cinema",
+    "name:ko": "서면현대극장",
+    "name:ko-Latn": "Seomyeonhyeondaegeukjang"
+  }
+},
+{
+  "type": "node",
+  "id": 368727660,
+  "lat": 35.1605920,
+  "lon": 129.0564370,
+  "tags": {
+    "amenity": "arts_centre",
+    "name": "춘추화랑",
+    "name:en": "Chunchu Gallery",
+    "name:ko": "춘추화랑",
+    "name:ko-Latn": "Chunchuhwarang"
+  }
+},
+{
+  "type": "node",
+  "id": 5485296222,
+  "lat": 35.1553235,
+  "lon": 129.0595164,
+  "tags": {
+    "amenity": "community_centre",
+    "name:en": "Ouput"
+  }
+},
+{
+  "type": "node",
+  "id": 9542967819,
+  "lat": 35.1543229,
+  "lon": 129.0575864,
+  "tags": {
+    "amenity": "arts_centre",
+    "name": "KT&G 상상마당"
+  }
+},
+{
+  "type": "node",
+  "id": 10848062351,
+  "lat": 35.1543226,
+  "lon": 129.0642886,
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "부산진구",
+    "addr:housenumber": "15",
+    "addr:postcode": "47297",
+    "addr:street": "전포대로199번길",
+    "addr:subdistrict": "전포동",
+    "leisure": "fitness_centre",
+    "name": "커스텀피트니스 서면점",
+    "phone": "+82507-1435-7378",
+    "website": "https://blog.naver.com/customfitness"
+  }
+},
+{
+  "type": "node",
+  "id": 11378022190,
+  "lat": 35.1529033,
+  "lon": 129.0576035,
+  "tags": {
+    "leisure": "sports_centre",
+    "level": "-1",
+    "name": "부산실탄사격장",
+    "name:en": "Pusan Shooting Range",
+    "name:ja": "釜山実弾射撃場",
+    "payment:cash": "yes",
+    "payment:visa": "yes",
+    "payment:visa_debit": "yes",
+    "phone": "+82 51 805 6007",
+    "sport": "shooting"
+  }
+},
+{
+  "type": "node",
+  "id": 12759210154,
+  "lat": 35.1484590,
+  "lon": 129.0652512,
+  "tags": {
+    "amenity": "theatre",
+    "name": "드림씨어터"
+  }
+}
+
+  ]
+}

@@ -1,0 +1,458 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.4 2390de5a",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-11T10:50:20Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 368634583,
+  "lat": 35.1568650,
+  "lon": 129.0565620,
+  "tags": {
+    "amenity": "cinema",
+    "name": "롯데극장 부산본점",
+    "name:en": "Lotte Cinema",
+    "name:ja": "ロッテシネマ(釜山本店)",
+    "name:ko": "롯데극장 부산본점",
+    "name:ko-Latn": "Rotdegeukjang"
+  }
+},
+{
+  "type": "node",
+  "id": 368634801,
+  "lat": 35.1606351,
+  "lon": 129.0609721,
+  "tags": {
+    "amenity": "cinema",
+    "name": "서면현대극장",
+    "name:en": "Seomyeonhyeondae Cinema",
+    "name:ko": "서면현대극장",
+    "name:ko-Latn": "Seomyeonhyeondaegeukjang"
+  }
+},
+{
+  "type": "node",
+  "id": 368725971,
+  "lat": 35.1635400,
+  "lon": 129.0511730,
+  "tags": {
+    "amenity": "arts_centre",
+    "name": "가야미술관",
+    "name:en": "Gaya Art Museum",
+    "name:ko": "가야미술관",
+    "name:ko-Latn": "Gayamisulgwan"
+  }
+},
+{
+  "type": "node",
+  "id": 368727660,
+  "lat": 35.1605920,
+  "lon": 129.0564370,
+  "tags": {
+    "amenity": "arts_centre",
+    "name": "춘추화랑",
+    "name:en": "Chunchu Gallery",
+    "name:ko": "춘추화랑",
+    "name:ko-Latn": "Chunchuhwarang"
+  }
+},
+{
+  "type": "node",
+  "id": 4646434973,
+  "lat": 35.1670494,
+  "lon": 129.0710731,
+  "tags": {
+    "name": "동의문화사"
+  }
+},
+{
+  "type": "node",
+  "id": 5084884332,
+  "lat": 35.1562646,
+  "lon": 129.0627272,
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "부산진구",
+    "addr:floor": "4",
+    "addr:housenumber": "26",
+    "addr:postcode": "47293",
+    "addr:street": "전포대로209번길",
+    "addr:subdistrict": "전포동",
+    "level": "3",
+    "name": "부산다문화교육지원센터",
+    "name:en": "Busan Multi-cultural Education Support Center",
+    "name:ja": "釜山多文化教育支援センター",
+    "name:zh": "釜山多文化教育支援中心",
+    "office": "educational_institution",
+    "opening_hours": "Tu-Sa 10:00-17:00"
+  }
+},
+{
+  "type": "node",
+  "id": 5485296222,
+  "lat": 35.1553235,
+  "lon": 129.0595164,
+  "tags": {
+    "amenity": "community_centre",
+    "name:en": "Ouput"
+  }
+},
+{
+  "type": "node",
+  "id": 9542967819,
+  "lat": 35.1543229,
+  "lon": 129.0575864,
+  "tags": {
+    "amenity": "arts_centre",
+    "name": "KT&G 상상마당"
+  }
+},
+{
+  "type": "node",
+  "id": 11378022190,
+  "lat": 35.1529033,
+  "lon": 129.0576035,
+  "tags": {
+    "leisure": "sports_centre",
+    "level": "-1",
+    "name": "부산실탄사격장",
+    "name:en": "Pusan Shooting Range",
+    "name:ja": "釜山実弾射撃場",
+    "payment:cash": "yes",
+    "payment:visa": "yes",
+    "payment:visa_debit": "yes",
+    "phone": "+82 51 805 6007",
+    "sport": "shooting"
+  }
+},
+{
+  "type": "node",
+  "id": 12759210154,
+  "lat": 35.1484590,
+  "lon": 129.0652512,
+  "tags": {
+    "amenity": "theatre",
+    "name": "드림씨어터"
+  }
+},
+{
+  "type": "way",
+  "id": 37400572,
+  "center": {
+    "lat": 35.1580806,
+    "lon": 129.0578046
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "서면문화로",
+    "name:en": "Seomyeonmunhwa-ro",
+    "name:ko": "서면문화로",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 164887962,
+  "center": {
+    "lat": 35.1624683,
+    "lon": 129.0551395
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "서면문화로",
+    "name:en": "Seomyeonmunhwa-ro",
+    "name:ko": "서면문화로"
+  }
+},
+{
+  "type": "way",
+  "id": 165583457,
+  "center": {
+    "lat": 35.1582767,
+    "lon": 129.0559065
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "서면문화로5번길",
+    "name:en": "Seomyeonmunhwa-ro 5beon-gil",
+    "name:ko": "서면문화로5번길"
+  }
+},
+{
+  "type": "way",
+  "id": 391469456,
+  "center": {
+    "lat": 35.1586762,
+    "lon": 129.0579889
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "서면문화로",
+    "name:en": "Seomyeonmunhwa-ro",
+    "name:ko": "서면문화로"
+  }
+},
+{
+  "type": "way",
+  "id": 471355101,
+  "center": {
+    "lat": 35.1651109,
+    "lon": 129.0718815
+  },
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "부산진구",
+    "addr:subdistrict": "전포동",
+    "building": "yes",
+    "leisure": "sports_centre",
+    "name": "석당문화관",
+    "sport": "swimming"
+  }
+},
+{
+  "type": "way",
+  "id": 500548808,
+  "center": {
+    "lat": 35.1593843,
+    "lon": 129.0568310
+  },
+  "tags": {
+    "highway": "service",
+    "name": "서면문화로",
+    "name:en": "Seomyeonmunhwa-ro",
+    "name:ko": "서면문화로"
+  }
+},
+{
+  "type": "way",
+  "id": 500548810,
+  "center": {
+    "lat": 35.1598466,
+    "lon": 129.0564172
+  },
+  "tags": {
+    "highway": "service",
+    "name": "서면문화로",
+    "name:en": "Seomyeonmunhwa-ro",
+    "name:ko": "서면문화로"
+  }
+},
+{
+  "type": "way",
+  "id": 502265962,
+  "center": {
+    "lat": 35.1597204,
+    "lon": 129.0556711
+  },
+  "tags": {
+    "highway": "service",
+    "name": "서면문화로",
+    "name:en": "Seomyeonmunhwa-ro",
+    "name:ko": "서면문화로"
+  }
+},
+{
+  "type": "way",
+  "id": 502519941,
+  "center": {
+    "lat": 35.1608216,
+    "lon": 129.0540516
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "서면문화로53번길",
+    "name:en": "Seomyeonmunhwa-ro 53beon-gil",
+    "name:ko": "서면문화로53번길"
+  }
+},
+{
+  "type": "way",
+  "id": 502519942,
+  "center": {
+    "lat": 35.1610186,
+    "lon": 129.0540845
+  },
+  "tags": {
+    "highway": "service",
+    "name": "서면문화로53번길",
+    "name:en": "Seomyeonmunhwa-ro 53beon-gil",
+    "name:ko": "서면문화로53번길"
+  }
+},
+{
+  "type": "way",
+  "id": 502519948,
+  "center": {
+    "lat": 35.1612406,
+    "lon": 129.0549086
+  },
+  "tags": {
+    "highway": "service",
+    "name": "서면문화로",
+    "name:en": "Seomyeonmunhwa-ro",
+    "name:ko": "서면문화로"
+  }
+},
+{
+  "type": "way",
+  "id": 502519949,
+  "center": {
+    "lat": 35.1614804,
+    "lon": 129.0554505
+  },
+  "tags": {
+    "highway": "service",
+    "name": "서면문화로",
+    "name:en": "Seomyeonmunhwa-ro",
+    "name:ko": "서면문화로"
+  }
+},
+{
+  "type": "way",
+  "id": 535866888,
+  "center": {
+    "lat": 35.1582730,
+    "lon": 129.0571783
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "서면문화로5번길",
+    "name:en": "Seomyeonmunhwa-ro 5beon-gil",
+    "name:ko": "서면문화로5번길"
+  }
+},
+{
+  "type": "way",
+  "id": 535868107,
+  "center": {
+    "lat": 35.1597827,
+    "lon": 129.0530112
+  },
+  "tags": {
+    "highway": "service",
+    "name": "서면문화로53번길",
+    "name:en": "Seomyeonmunhwa-ro 53beon-gil",
+    "name:ko": "서면문화로53번길"
+  }
+},
+{
+  "type": "way",
+  "id": 535868604,
+  "center": {
+    "lat": 35.1626437,
+    "lon": 129.0549405
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "서면문화로",
+    "name:en": "Seomyeonmunhwa-ro",
+    "name:ko": "서면문화로",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 782033998,
+  "center": {
+    "lat": 35.1679670,
+    "lon": 129.0727543
+  },
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "부산진구",
+    "addr:subdistrict": "양정동",
+    "building": "school",
+    "name": "다촌문화관"
+  }
+},
+{
+  "type": "way",
+  "id": 796432669,
+  "center": {
+    "lat": 35.1594259,
+    "lon": 129.0564080
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "서면문화로",
+    "name:en": "Seomyeonmunhwa-ro",
+    "name:ko": "서면문화로"
+  }
+},
+{
+  "type": "way",
+  "id": 796432670,
+  "center": {
+    "lat": 35.1588313,
+    "lon": 129.0572333
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "서면문화로",
+    "name:en": "Seomyeonmunhwa-ro",
+    "name:ko": "서면문화로"
+  }
+},
+{
+  "type": "way",
+  "id": 796432671,
+  "center": {
+    "lat": 35.1598816,
+    "lon": 129.0559674
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "서면문화로",
+    "name:en": "Seomyeonmunhwa-ro",
+    "name:ko": "서면문화로"
+  }
+},
+{
+  "type": "way",
+  "id": 796432673,
+  "center": {
+    "lat": 35.1606048,
+    "lon": 129.0556616
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "서면문화로",
+    "name:en": "Seomyeonmunhwa-ro",
+    "name:ko": "서면문화로"
+  }
+},
+{
+  "type": "way",
+  "id": 796432677,
+  "center": {
+    "lat": 35.1613957,
+    "lon": 129.0552811
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "서면문화로",
+    "name:en": "Seomyeonmunhwa-ro",
+    "name:ko": "서면문화로"
+  }
+},
+{
+  "type": "way",
+  "id": 1356385943,
+  "center": {
+    "lat": 35.1620206,
+    "lon": 129.0549865
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "서면문화로",
+    "name:en": "Seomyeonmunhwa-ro",
+    "name:ko": "서면문화로"
+  }
+}
+
+  ]
+}

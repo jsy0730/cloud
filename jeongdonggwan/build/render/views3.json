@@ -1,0 +1,4 @@
+{"street_nw": {"w": 1920, "h": 1080, "fov": 50, "eye": [-34, 156, 6.5], "target": [26, 96, 15], "sunAz": 245, "sunEl": 34},
+ "street_sw": {"w": 1920, "h": 1080, "fov": 50, "eye": [-36, 2, 6.5], "target": [12, 52, 14], "sunAz": 230, "sunEl": 40},
+ "aerial": {"w": 1920, "h": 1080, "fov": 30, "eye": [-175, -120, 140], "target": [22, 60, 10], "sunAz": 215, "sunEl": 45},
+ "night_sw": {"w": 1920, "h": 1080, "fov": 50, "eye": [-36, 2, 6.5], "target": [12, 52, 14], "night": true, "sunAz": 260, "sunEl": 8}}

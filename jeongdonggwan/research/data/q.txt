@@ -1,0 +1,7 @@
+[out:json][timeout:60];
+(
+ nwr(around:1000,35.1570,129.0660)["amenity"~"theatre|arts_centre|community_centre|cinema|concert_hall|events_venue"];
+ nwr(around:1000,35.1570,129.0660)["leisure"~"sports_centre|sports_hall|fitness_centre|stadium"];
+ nwr(around:1000,35.1570,129.0660)["building"~"sports_hall|sports_centre|theatre"];
+);
+out center tags;

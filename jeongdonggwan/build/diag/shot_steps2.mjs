@@ -1,0 +1,2 @@
+import { chromium } from '/opt/node-tools/node_modules/playwright/index.mjs';
+const b=await chromium.launch(); const p=await b.newPage({viewport:{width:1920,height:420}}); await p.goto('file:///tmp/claude-0/-home-user-cloud/76ed2005-4113-58c6-b90f-f280afa8844d/scratchpad/build/diag/steps2.html'); await p.waitForTimeout(800); await p.screenshot({path:'/tmp/claude-0/-home-user-cloud/76ed2005-4113-58c6-b90f-f280afa8844d/scratchpad/build/diag/steps2.png',clip:{x:0,y:0,width:1920,height:410}}); await b.close();
