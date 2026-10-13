@@ -1,0 +1,4 @@
+
+FAILED - Found NEW validation errors:
+  ppt\revisionInfo.xml: 1 new error(s)
+    - Element '{http://schemas.microsoft.com/office/powerpoint/2015/10/main}revInfo': No matching global declaration available for the validation root.
