@@ -1,0 +1,87 @@
+# 전포 정동관(停動館) — PowerPoint 발표자료 정리본
+
+부산진구 전포동 207번지 일대 53필지(4,964.5㎡) 복합주차장 **정동관**의 건축계획 발표자료를 PowerPoint로 만든 과정과 결과를 모았습니다.
+공설기 v1.2 디자인 시스템(색 · 글꼴 역할 · 헤더 · 푸터)을 따르며, 렌더는 Blender Cycles로 만들었습니다.
+
+- 정리일: 2026-10-13
+- **최신본: [v09 (25장)](versions/v09_투시도2_확인할것삭제_25장_최종.pptx)** · [PDF](final/전포정동관_최종본_v9.pdf)
+- 이 폴더는 저장소의 기존 HTML 기반 작업(`../decks/full`, `../build`, `../research`)을 PowerPoint로 옮긴 결과와 그 과정입니다.
+
+## 폴더 지도
+
+| 폴더 | 내용 |
+|---|---|
+| [`versions/`](versions) | v00~v09 PowerPoint 전체 버전(버전표 아래) |
+| [`final/`](final) | 최신본 PDF (글꼴이 없는 PC에서도 그대로 보임) |
+| [`proposals/`](proposals) | 사업 배경 3쪽 구조 시안 3종(A 흐름형 · B 숫자형 · C 도식형) |
+| [`review/`](review) | 검토 노트, 최신본 점검 기록, 버전별 개요 이미지(전체 쪽 썸네일) |
+| [`research/`](research) | 사업 배경 · 주차장/공연장 · 대지 선정 근거 조사, 구조 대안 10선 |
+| [`renders/`](renders) | Blender 렌더(세대별) · 볼륨 도출 축측 이미지 |
+| [`figures/`](figures) | 슬라이드에 쓴 직접 작도 도면 · 지도 · 분석 그림 |
+| [`source/`](source) | 덱 빌드 코드, 도면 스크립트, Blender 장면 스크립트 |
+| [`MANIFEST.csv`](MANIFEST.csv) | 모든 파일의 크기와 SHA-256 (텍스트 파일은 줄바꿈 LF 기준, `where` 열이 drive-only인 파일은 Google Drive에만 있음) |
+
+## 버전표
+
+| 버전 | 파일 | 쪽수 | 용량 | 한 줄 요약 | 개요 이미지 |
+|---|---|---:|---:|---|---|
+| **v00** 시험본(자체 스타일) | [`v00_시험본_자체스타일_8장.pptx`](versions/v00_시험본_자체스타일_8장.pptx) | 8 | 3.4 MB | 사업 배경 · 대지 · 부지 · 향 · 소음 · 조망까지 먼저 옮겨 본 시험본. 공설기 적용 전의 자체 스타일 | [보기](review/version_overview/v00_시험본_자체스타일_8장.jpg) |
+| **v01** 공설기 v1.2 적용 | [`v01_공설기v1.2적용_21장.pptx`](versions/v01_공설기v1.2적용_21장.pptx) | 21 | 11.2 MB | 용어 헤더 · 섹션 탭 · 결론 밴드 · 출처/담당자 푸터 등 공설기 v1.2 토큰과 컴포넌트로 전면 재작도. 사례 분석 3쪽(도면 포함) · 볼륨 도출 · 최종안 · 용도 · 단면 · 면적 · 동선 · 법규 추가 | [보기](review/version_overview/v01_공설기v1.2적용_21장.jpg) |
+| **v02** Blender 렌더 | [`v02_Blender렌더_22장.pptx`](versions/v02_Blender렌더_22장.pptx) | 22 | 11.0 MB | 투시도를 Blender Cycles + Poly Haven 자산으로 다시 제작(투시도 Ⅰ · Ⅱ), 목재 슬랫 외피 · 검은 외부 계단, 사람 형상 제거 | [보기](review/version_overview/v02_Blender렌더_22장.jpg) |
+| **v03** 사례 차용 · 형태 대안 | [`v03_사례차용_형태대안_25장.pptx`](versions/v03_사례차용_형태대안_25장.pptx) | 25 | 11.7 MB | 콘셉트 낮 · 밤 2장 분리, 사례 차용 외피 대안 3종 · 형태 대안 3종, 사례 도면에 강조 표시, 1111 Lincoln Road 도면 보강 | [보기](review/version_overview/v03_사례차용_형태대안_25장.jpg) |
+| **v04** 글꼴 고정 · 여백 1차 | [`v04_글꼴고정_여백1차_25장.pptx`](versions/v04_글꼴고정_여백1차_25장.pptx) | 25 | 11.8 MB | 글꼴 크기를 박스 크기와 무관한 역할별 고정값으로, 박스 · 여백 1차 정리(글자 수 추정 레이아웃) | [보기](review/version_overview/v04_글꼴고정_여백1차_25장.jpg) |
+| **v05** 세련화 · 실측 레이아웃 | [`v05_세련화_실측레이아웃_25장.pptx`](versions/v05_세련화_실측레이아웃_25장.pptx) | 25 | 14.5 MB | PowerPoint가 계산한 실제 텍스트 높이로 배치(넘침 · 겹침 0), 한글 어절 줄바꿈(ko-KR), 단면 · 층별 용도 도면 재작도, 볼륨 도출 축측 렌더, 중복 정리 | [보기](review/version_overview/v05_세련화_실측레이아웃_25장.jpg) |
+| **v06** 사업 배경 3쪽 · 규약 적용 · 새 렌더 | [`v06_사업배경3쪽_규약적용_새렌더_27장.pptx`](versions/v06_사업배경3쪽_규약적용_새렌더_27장.pptx) | 27 | 16.9 MB | 사업 배경 3쪽(먹고 · 보고 · 듣고), 부지 선정 재구성, 새 렌더(경사 슬랫 · 상세 계단 · 검은 아스팔트 · 인도 · 가로수 · 드론), 하단 결론 밴드 제거와 헤더 문장화(jinba 규약) | [보기](review/version_overview/v06_사업배경3쪽_규약적용_새렌더_27장.jpg) |
+| **v07** 사업 배경 시안 채택 | [`v07_사업배경시안채택_27장.pptx`](versions/v07_사업배경시안채택_27장.pptx) | 27 | 16.9 MB | 사업 배경 3쪽을 구조 시안의 배치(C · C · B)로 교체 | [보기](review/version_overview/v07_사업배경시안채택_27장.jpg) |
+| **v08** 줄바꿈 보정 | [`v08_줄바꿈보정_27장.pptx`](versions/v08_줄바꿈보정_27장.pptx) | 27 | 16.9 MB | 끝줄에 한두 단어만 남는 문단 18곳 → 0곳, 수치와 단위 붙임 | [보기](review/version_overview/v08_줄바꿈보정_27장.jpg) |
+| **v09** 투시도 Ⅱ · 확인할 것 삭제 (최종) | [`v09_투시도2_확인할것삭제_25장_최종.pptx`](versions/v09_투시도2_확인할것삭제_25장_최종.pptx) | 25 | 16.1 MB | 투시도 Ⅱ와 확인할 것(THANK YOU 포함) 쪽 삭제, 목차 · 쪽수 정리. 25장 | [보기](review/version_overview/v09_투시도2_확인할것삭제_25장_최종.jpg) |
+
+각 버전의 상세 변경 내용은 [`CHANGELOG.md`](CHANGELOG.md)에 있습니다.
+
+## 최신본(v09) 구성
+
+| 쪽 | 제목 | 쪽 | 제목 |
+|---:|---|---:|---|
+| 1 | 표지 | 14 | 10 사례 분석 Ⅱ (Saint-Luc · Park 'n' Play) |
+| 2 | 목차 | 15 | 11 사례 분석 Ⅲ (Blaibach · 1111 Lincoln Road) |
+| 3 | 01 사업 배경 Ⅰ (변천 · 지금/앞으로) | 16 | 12 볼륨 도출 |
+| 4 | 02 사업 배경 Ⅱ (먹고 · 보고 · 듣고) | 17 | 13 최종안 |
+| 5 | 03 사업 배경 Ⅲ (왜 한 건물인가) | 18 | 14 투시도 |
+| 6 | 04 대지 분석 | 19 | 15 용도 선정 · 층별 계획 |
+| 7 | 05 부지 선정 | 20 | 16 단면도 |
+| 8 | 06 향 · 일조 | 21 | 17 실별 면적 |
+| 9 | 07 소음 | 22 | 18 동선 및 진입 계획 |
+| 10 | 08 조망 | 23 | 19 법규 검토 · 구조 · 방재 제안 |
+| 11 | 콘셉트 · 낮(停) | 24 | 20 사례 차용 외피 대안 |
+| 12 | 콘셉트 · 밤(動) | 25 | 21 형태 대안 3종 |
+| 13 | 09 사례 분석 Ⅰ (헤르마 · 평택 JS타워) | | |
+
+## 다시 만드는 법
+
+- 최신본의 빌드 코드: [`source/deck/v09_complete`](source/deck/v09_complete) (자세한 순서는 [`source/README.md`](source/README.md))
+- 필요한 것: Windows + PowerPoint(텍스트 높이 실측용), Node 18+ (`pptxgenjs`), Python 3 (Pillow · matplotlib · shapely), 글꼴 Malgun Gothic · Noto Serif KR
+- 렌더: Blender 5.2 + Poly Haven 자산(CC0), [`source/blender`](source/blender)
+- 사례 사진 · 지도 원본 등 제3자 저작물은 저장소에 넣지 않았습니다. 완전한 재빌드에 필요한 이미지 폴더는 Google Drive 정리본의 `03_모델_도면` 아래에 있습니다.
+
+## 이미지 · 자료 출처
+
+슬라이드 하단 출처 줄과 같습니다.
+
+- 지도: © OpenStreetMap contributors (ODbL) · 토지이용계획확인도면: 토지이음(2026.10.11 조회)
+- 사례 사진 · 도면: ArchDaily — Saint-Luc(dJGA + MODULO, Lieven Van Landschoot), Park 'n' Play(JAJA Architects, Rasmus Hjortshøj / COAST), Concert Hall Blaibach(peter haimerl.architektur, NAARO), 헤르마 주차빌딩(JOHO Architecture, Namgoong Sun · Jeonghoon Lee)
+- 1111 Lincoln Road: Herzog & de Meuron, 사진 Phillip Pessar (CC BY 2.0) · 삽입 사진 ArchDaily
+- 소음 쪽 사진: Petr Meissner (CC BY 2.0) · 조망 쪽 사진: Christian Bolz (CC BY-SA 4.0)
+- 렌더 하늘 · 텍스처 · 나무: Poly Haven (CC0)
+- 통계 · 보도: 슬라이드와 [`research/`](research)의 각 파일 하단 링크
+- 사업 배경 Ⅰ의 변천 · 방문객 수 · 사당 사례 등은 보도 인용이며 공식 통계가 아닌 항목이 있음(해당 쪽 노트에 명시)
+
+## 알려진 한계 · 열린 항목
+
+1. 먹고 · 보고 카드(사업 배경 Ⅱ)에 전포 인기 가게 사진이 없음 — 직접 찍은 사진을 받으면 넣기로 함
+2. 소음 dB은 실측이 아닌 가정 교통량 기반 개략 추정
+3. 법령 조항 번호와 수치(주차장법 시행규칙 제5 · 6조, 경사로 17% 등)는 저장소 조사값 그대로이므로 제출 전 법제처 원문 확인 필요
+4. 평택 JS타워 사진은 출처 미확인(저장소 자료), 도면 미공개로 사진 판독
+5. 형태 대안 A~C는 외피 · 매스만 바꾼 비교용으로 주차 대수 · 법규 · 구조를 다시 검토하지 않음
+6. 투시도 Ⅱ 삭제로 끝 코어 계단 근접 렌더(`f3_stair_close`)와 소로 안 렌더(`f3_lane_entry`)는 덱에서 빠졌고 `renders/`에만 있음
+7. 공설기가 지정한 Pretendard가 없어 맑은 고딕으로 대체
+8. 표지에 학번이 들어 있고 사례 사진은 제3자 저작물이므로, 저장소를 외부에 공개할 때 확인 필요
