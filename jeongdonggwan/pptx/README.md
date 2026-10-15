@@ -9,6 +9,12 @@
 - Claude가 빌드한 마지막 버전: [v09 (25장)](versions/v09_투시도2_확인할것삭제_25장_최종.pptx) · [PDF](final/전포정동관_최종본_v9.pdf). 파일명의 "최종"은 이 빌드의 마지막이라는 뜻이며, 그 뒤 사용자가 고친 v10 · v11이 더 나중 파일임
 - 이 폴더는 저장소의 기존 HTML 기반 작업(`../decks/full`, `../build`, `../research`)을 PowerPoint로 옮긴 결과와 그 과정입니다.
 
+## 저장 규칙 (2026-10-15부터)
+
+- **GitHub**: 문서 · 기록 · 스크립트 · 1MB 이하 미리보기만 커밋
+- **Google Drive** [`Claude 작업/02_결과물_PPT_보고서/정동관_PPT_버전`](https://drive.google.com/drive/folders/1WbETMZ26SM-8ikSYZwcrSt9ngCn3Bwbt): v17부터의 pptx, PDF, 1MB가 넘는 렌더 · 사진
+- v16까지 이미 커밋된 파일은 그대로 저장소에 있음. 자세한 규칙은 저장소 맨 위 `CLAUDE.md`
+
 ## 폴더 지도
 
 | 폴더 | 내용 |

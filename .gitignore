@@ -1,0 +1,10 @@
+# 큰 파일은 Google Drive에 보관합니다(규칙: CLAUDE.md).
+# 이미 저장소에 있는 파일은 계속 추적되고, 새로 만드는 파일만 막습니다.
+*.pptx
+*.potx
+*.pdf
+*.fntdata
+*.blend
+*.mp4
+*.mov
+*.zip
